@@ -1,0 +1,777 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Responsive Pure CSS Menu</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<style>
+  header{
+    background-color: #161616;
+    clip-path: polygon(0 0,100% 0,100% 100%,70% 87%,0 100%);
+    
+  }
+  html{
+    scroll-behavior: smooth;
+  }
+  *
+  {
+    padding: 0;
+    margin: 0;
+    box-sizing:border-box ;
+    -webkit-font-smotthing:antialiased ;
+   
+  }
+  body{
+    font-family: 'poppins',sans-serif;
+  }
+  .container{
+    max-width: 1000px;
+    padding:0 15px ;
+    margin: 0 auto;
+  }
+ header nav{
+  padding: 2rem 0;
+ }
+ header nav .left a{
+  color: white;
+  text-decoration: none;
+  margin-right:  2rem;
+  text-transform: uppercase;
+  transition-delay: all.3s;
+  -webkit-transition-all:all.3s ;
+  -moz-transform-all:all.3s ;
+  -o-transition:all.3s ;
+ }
+ header nav .left a:hover{
+  color: #3dcfd3;
+ }
+ header  nav.branding{
+  margin-right: 3rem;
+ }
+ header  nav.branding a{
+  margin-right: 3rem;
+ }
+  .flex{
+    display: flex;
+  }
+  .flex-1{
+    flex: 1;
+  }
+  .item-center{
+    align-items: center;
+  }
+  .justify-between{
+justify-content: space-between;
+  }
+  .hi{
+    margin-top: 6px;
+    margin-left: 10px;
+  }
+  .btn {
+    padding: 0.8rem 3rem;
+    font-size: 1rem;
+    font-weight: 600;
+    border: 2px transparent;
+    cursor: pointer;
+    outline: none;
+
+    text-transform: uppercase;
+    transition-delay: all.3s ease;
+  -webkit-transition-all:all.3s ;
+  -moz-transform-all:all.3s ;
+  -o-transition:all.3s ;
+  }
+  .btn-primary{
+    background-color: #3dcfd3;
+    color:black;
+  }
+  .btn-secondary{
+    background-color:transparent;
+    color:#3dcfd3;
+border: 1px solid #3dcfd3;
+  }
+  .btn-secondary:hover{
+    background-color:#3dcfd3;
+    color:black;
+
+  }
+  .btn-primary:hover{
+    background-color: transparent;
+    border:1px solid #3dcfd3 ;
+      color:#3dcfd3 ;
+  }
+ .hero .right{
+  color: white;
+  margin-left: -100px;
+ }
+ .hero {
+  padding: 3rem 0;
+ }
+ .hero .right h6{
+  font-size: 1.6rem;
+  color:#3dcfd3 ;
+  margin-bottom: 0.5rem;
+ }
+ .hero .right h1{
+  font-size: 4rem;
+ font-weight: 100;
+ line-height: 1.2;
+ margin-bottom: 2rem;
+
+ }
+ .hero .right h1 span{
+  color:#3dcfd3 ;
+ 
+ }
+ .hero .right  p{
+ line-height: 1.9;
+ margin-bottom: 2rem;
+ }
+ .hero .right  {
+margin-top: -2rem;
+ }
+ .justify-center{
+  justify-content: center;
+ }
+.hi{
+  font-size: 20px;
+}
+ .hero img{
+  margin-left: -300px;
+ }
+ /*section*/
+ section{
+  padding: 6rem;
+ }
+ .ab{
+  margin-left: -200px;
+ }
+ section .about.h1{
+  margin-bottom: 1rem;
+  font-size: 1.6rem;
+  font-weight: 400;
+ }
+ section.about h1 span{
+  color:#3dcfd3 ;
+ }
+ section.about h3 {
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  font-weight: 400;
+ 
+ }
+ section.about p {
+  font-family: 'lato'sans-serif ;
+  margin-bottom:4rem;
+  line-height: 1.8;
+ }
+
+.socialmedia{
+  margin-top: -30px;
+}
+             .fa-twitter,
+             .fa-youtube
+         ,.fa-instagram,.fa-facebook,.fa-globe{
+          color: white;
+          background-color: #161616;
+          padding: 10px 10px;
+          border-radius: 50%;
+     
+         }
+         .fa-twitter:hover
+           {background-color:#3dcfd3;  }
+           .fa-youtube:hover{background-color:#3dcfd3;  }
+         .fa-instagram:hover{background-color:#3dcfd3;  }
+         .fa-facebook:hover{background-color:#3dcfd3;  }
+         .fa-globe:hover{background-color:#3dcfd3;  }
+
+/*container3*/
+.section-heading {
+  color: black;
+  text-align: center;
+  margin-bottom: 1rem;
+  line-height: 0.5;
+}
+.section-heading+p {
+  color: black;
+  text-align: center;
+font-family: 'laro'sans-serif;
+margin-bottom: 6rem;
+}
+.section-heading span {
+  color: #3dcfd3;
+
+}
+
+.fa-paintbrush ,.fa-code,.fa-display,.fa-pen-to-square,.fa-video,.fa-comment{
+padding: 17px 25px;
+  color: black;
+ background-color: #3dcfd3;
+  font-size: 30px;
+ justify-content: center;
+ text-align: center;
+ }   
+
+ section.services{
+  background-color:whitesmoke;
+ }
+ section.services .card-warper  {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  grid-column-gap: 2rem;
+  grid-row-gap: 6rem;
+ }
+ section.services .card-warper .card {
+background-color: white;
+padding: 3rem 2rem;
+position: relative;
+padding-top:5rem ;
+text-align: center;
+
+
+    transition-delay: all.3s ease;
+  -webkit-transition-all:all.3s ease ;
+  -moz-transform-all:all.3s ease ;
+  -o-transition:all.3s ease;
+ }
+ section.services .card-warper .card i{
+  position: absolute;
+top:-3.5rem;
+left:50%;
+transform: translateX(-50%);
+transition: all .3s ease;
+
+ }
+ section.services .card-warper .card h2{
+  font-weight: 400;
+  font-size: 1.2rem;
+ }
+ section.services .card-warper .card p{
+  font-family: 'lato'sans-serif;
+  color: lightgray;
+  line-height: 1.6;
+
+ }
+ section.services .card-wraper .card:hover{
+  background-color: #161616;
+ }
+ section.services .card-warper .card:hover h2{
+
+color: white;
+ }
+ /*freelancer*/
+ section.Freelancer{
+  text-align: center;
+  background:linear-gradient(rga(0,0,0,0.7),rga(0,0,0,0.7));
+background-color: #161616;
+color: white;
+clip-path: polygon(0 0,100% 0,100% 100%,67% 80%,0 100%);
+ }
+ section.Freelancer h1{
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+ }
+ section.Freelancer p{
+  margin-bottom: 2rem;
+  font-family: 'lato'sans-serif;
+
+ }
+ .fa-mobile-screen-button,.fa-envelope,.fa-map{
+  font-size: 30px;
+ }
+ .section.contact .card-warper{
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  grid-column-gap: 5rem;
+ }
+.card-warperr{
+
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  grid-column-gap:3rem ;
+}
+.card-warperr .cards{
+  text-align: center;
+}
+.card-warperr .cards i{
+  margin-bottom: 3rem;
+}
+.card-warperr h1{
+  font-weight: 400;
+  margin-bottom: 1rem;
+}
+.card-warperr h6{
+  font-weight: 400;
+  font-size: 1rem;
+  color: grey;
+}
+section.contact .input-wrap{
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  margin-bottom: 2rem;
+
+  grid-gap: 2rem;
+}
+section.contact .input-wrap-2{
+  display: flex;
+  flex-direction: column;
+ 
+ 
+}
+section.contact .input-wrap-2 input{
+  margin-bottom: 2rem;
+  border: 1px solid black;
+  font-size: 0.8rem;
+
+}
+section.contact input{
+  padding: 0.5rem;
+  border: 1px solid black;
+}
+section.contact .input-wrap-2 textarea{
+  padding: 0,5rem;
+  border: 1px solid black;
+  padding: 0.5rem;
+}
+section.contact input:focus{
+  outline: none;
+}
+section.contact .btn-wrapper{
+  padding: 10px 5px;
+  text-align: center;
+margin-top:2rem ;
+}
+footer{
+background-color: #161616;
+  text-align: center;
+  padding:5rem 0 ;
+  font-family: 'lato'sans-serif ;
+  font-weight: 500;
+}
+.footer-social a{
+
+  margin-right: 1rem;
+  
+  
+}
+.footer-social{
+  margin-bottom: 2rem;
+  margin-top: 2rem;
+}
+footer.fotterlogo{
+
+  font-family: 'lato'sans-serif ;
+
+}
+.copyright{
+  color:#3dcfd3;
+}
+footer.fa-globe{
+      margin-left: -2rem;
+     
+         }
+         footer.fa-twitter{margin-left: -2rem;
+     
+    }
+             footer.fa-youtube{margin-left: -2rem;
+     
+    }
+         footer.fa-instagram{margin-left: -2rem;
+     
+    } footer.fa-facebook{margin-left: -2rem;
+     
+    }
+
+
+
+.site-man-wrapper{
+
+position: relative;}
+.hamburgar{
+  position: absolute;
+  top: 40px;
+  right: 40px;
+  z-index: 11;
+  background: none;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+.fa-bars{
+  font-size: 30px;
+}
+.mobile-nav{
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1001;
+  background: lightgray;
+  width: 50%;
+  height: 50%;
+  padding: 8rem;
+  padding-top: 5rem;
+  text-align: center;
+  flex-wrap: wrap;
+  display: none;
+}
+
+.mobile-nav ul {
+
+  list-style-type: none;
+
+}
+.mobile-nav ul li a{
+  color: #161616;
+  text-decoration: none;
+  font-size: 2rem;
+  border-radius: 5px;
+
+  border-bottom:1.5px solid transparent ;
+  letter-spacing: 1.5px;
+  transition: all 0.3s ease;
+}
+.mobile-nav ul li a.active,.mobile-nav ul li a:hover{
+
+  background-color: #3dcfd3;
+  color: #161616;
+}
+.mobile-nav .menu-btn i{
+  color: #161616;
+  cursor: pointer;
+  display: none;
+}
+input[type="checkbox"]{
+  display: none;
+}
+.menu-btn{
+  color: white;
+  display: none;
+}
+@media (max-width:1000px) {
+ nav #main-nav{
+  display: none;
+ }
+ .menu-btn{
+  display: block;
+
+}}
+
+.hero .left img{
+  width:800px
+}
+  
+@media (max-width:1024px) {
+ header #main-nav{
+  display: none;}
+  .hero .left img{
+width: 400px;
+  }
+  .hero .right h6{
+  font-size: 1rem;
+  color:#3dcfd3 ;
+  margin-bottom: 0.5rem;
+ }
+ .hero .right h1{
+  font-size: 2rem;
+ font-weight: 100;
+ line-height: 1.2;
+ margin-bottom: 2rem;
+
+ }
+ .hero{
+  padding-top: 10rem;
+ }
+ header{
+
+    clip-path: polygon(0 0,100% 0,100% 100%,27% 91%,0 100%);
+    
+  }
+  section.about .flex-1 img{
+  height: 150px;
+
+  }
+  section.services .card-warper  {
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  grid-column-gap: 2rem;
+  grid-row-gap: 6rem;
+ }
+}
+section.about img{
+  height: 200px;
+  }
+  @media(max-width:567px){
+   body{
+    left: 0;
+   } 
+    .hero{
+margin-left: 200px;
+
+
+    }
+    header{
+      width: 515px;
+
+      font-size: 1rem;
+      left: 0;
+    }
+    .hero .right h6{
+  font-size: 0.5rem;
+
+ }
+ .hero .right h1{
+  font-size:1rem;
+ font-weight: 100;
+ line-height: 1.2;
+ margin-bottom: 2rem;
+
+ }
+ .hero .right p{
+  font-size:1rem;
+
+
+ }
+ .fa-bars{
+  color: white;
+margin-left: -570px;
+
+
+}
+.hero{
+  padding-top: 5rem;
+ }
+ .btn {
+    padding: 0.4rem 1rem;
+    font-size: 0.8rem;
+  
+  }
+  .about-inner-wrap{
+    flex-direction: column;
+    
+  }
+.about.right{
+  text-align: center;
+  line-height: 0.1rem;
+  margin-top: 2rem;
+
+}
+.about h1,h3{
+  text-align: center;
+}
+.about p{
+  text-align: center;
+}
+.socialmedia{
+  display: flex;
+ 
+}
+section{
+  padding: 4rem;
+}
+section.services .card-warper  {
+  display: grid;
+  grid-template-columns: repeat(1,1fr);
+  grid-column-gap: 2rem;
+  grid-row-gap: 6rem;
+ }
+}
+
+    </style>
+
+    <body>
+       <div class="site-man-wrapper">
+        <button class="hamburgar">
+         
+  <input type="checkbox" id="click">
+  <label for="click" class="menu-btn"> <i class="fa-solid fa-bars"></i>  </label>
+        </button>
+ <div class="mobile-nav">
+
+  <ul>
+    <li><a href="#" class=" active">Home</a></li><br> <br>
+    <li>   <a href="#">About</a></li>
+      <li><a href="#">Services</a>
+</li>
+<li>        <a href="#">Resume</a></li>
+  </ul>
+ </div>
+        <header>
+          <div class="container">
+            <nav id ="main-nav" class="flex item-center justify-between">
+                <div class="left flex item-center">
+              <div class="branding">
+                <img src="E:\him\images-for-portfolio\images\logo.svg" alt="">
+              </div>
+              <div class="hi">
+
+                <a href="#">Home</a>
+                <a href="#About">About</a>
+                <a href="#Ser">Services</a>
+                <a href="#">Resume</a>
+                </div>
+                </div>
+             <div class="right  ">
+              <button class="btn btn-primary">Contact</button>
+             </div>
+            </nav>
+            
+            <div class="hero flex item-center justify-between">
+              <div class="left flex-1 flex justify-center">
+                <img class="my" src="E:\him\images-for-portfolio\images\realme.png" alt="">
+            </div>
+              <div class="right flex-1">
+                <h6>Himanshu Jadhav</h6>
+                <h1>I'm a Creative Web 
+                  <span> Developer </span> </h1>
+                <p>Hello I am Himanshu Jadhav ,I Create and website </p>
+                <div>
+                <button class="btn btn-secondary">Download CV</button>
+              </div> 
+              </div>
+            </div>
+          </div>
+        </header>
+        <section class="about">
+          <div class="container flex item-center about-inner-wrap">
+           
+           
+            <div class="flex-1 ">
+              <img src="E:\him\images-for-portfolio\images\2.jpg" alt="">
+
+          </div>
+          <div  class="flex-1">
+            <h1>About <span>Me</span> </h1>
+            <h3>Hello! i'm Himanshu Jadhav.</h3>
+            <p>I am Himanshu Jadhav, web developer from Shirpur, India. I have rich experience in web site design and building and customization.</p>
+      
+          
+            <div class="socialmedia">
+              <a href="#"><i class="fa-solid fa-globe"></i></a>
+              <a href="#"><i class="fa-brands fa-facebook"></i></a>
+              <a href="#"><i class="fa-brands fa-twitter"></i></a>
+              <a href="#"><i class="fa-brands fa-youtube"></i><a>
+              <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            </div>
+          </div>
+        </div>
+        </section>
+        <section class="services">
+          <div class="container">
+            <h1 class="section-heading"> <span>My</span> Skill </h1>
+            <p>we provide high standard clean website for your business solution</p>
+            <div class="card-warper">
+            <div class="card">
+              <i class="fa-solid fa-paintbrush"></i>
+              <h2>Graphic Designer</h2>
+              <p>there are many variation of passage of but majority have success full</p>
+            </div>
+
+            <div class="card">
+               <i class="fa-solid fa-code"></i>
+              <h2>Web Development</h2>
+              <p>there are many variation of passage of but majority have success full</p>
+            </div>
+
+            <div class="card">
+              <i class="fa-solid fa-display"></i>
+              <h2>Web Design</h2>
+              <p>there are many variation of passage of but majority have success full</p>
+            </div>
+
+            <div class="card">
+              <i class="fa-solid fa-video"></i>
+              <h2>Vedio Editing</h2>
+              <p>there are many variation of passage of but majority have success full</p>
+            </div>
+
+            <div class="card">
+              <i class="fa-solid fa-pen-to-square"></i>
+              <h2>Copy Wirte</h2>
+              <p>there are many variation of passage of but majority have success full</p>
+            </div>
+
+            <div class="card">
+              <i class="fa-solid fa-comment"></i>
+              <h2>Support</h2>
+              <p>there are many variation of passage of but majority have success full</p>
+            </div>
+          </div>
+        </div>
+        </section>
+        <section class="Freelancer">
+         
+          <h1>I Am Available For Freelancer.</h1>
+          <p>We provide high standar clean website for your busisness solution</p>
+          <button class="btn btn-primary">Download Resume</button>
+        </section>
+<section class="contact" >
+<div class="container">
+  <h1 class="section-heading">Contact <span>Us</span>
+  </h1>
+  <p>we provide high standard clean website for your business solution</p>
+  <div class="card-warperr justify-center">
+ 
+    <div class="cards">
+      <i class="fa-solid fa-mobile-screen-button"></i>
+      <h1>Call us on</h1>
+      <h6>+91 7058314868</h6>
+    </div>
+    <div class="cards">
+      <i class="fa-solid fa-envelope"></i>
+      <h1>E-mail at us</h1>
+      <h6>himanshujadhav341@gmail.com</h6>
+  </div>
+  <div class="cards">
+      <i class="fa-solid fa-map"></i>
+      <h1>Address</h1>
+      <h6>Janta Nagar,Near Maruti Temple ,Shirpur-425405,India</h6>
+    </div>
+  </div>
+  <form>
+  <div class="input-wrap">
+    <input type="text" placeholder="Your Name">
+    <input type="email" placeholder="Your Email">
+  </div>
+  <div class="input-wrap-2">
+    <input type="text" placeholder="Your Subject">
+    <textarea name="" id="" cols="30" rows="10" placeholder="Your Message"></textarea>
+  </div>
+  <div class="btn-wrapper">
+    <button>
+  <div class="btn btn-primary ">Send Message</div>
+</button>
+</div>
+</div>
+</form>
+</section>
+<footer>
+  <div class="fotterlogo">
+  <img src="E:\him\images-for-portfolio\images\logo.svg" alt="">
+  </div>
+  <div class="footer-social">
+
+              <a href="#"><i class="fa-solid fa-globe"></i></a>
+              <a href="#"><i class="fa-brands fa-facebook"></i></a>
+              <a href="#"><i class="fa-brands fa-twitter"></i></a>
+              <a href="#"><i class="fa-brands fa-youtube"></i><a>
+              <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            </div>
+            <div class="copyright">
+              Copyright 2019 @ Name Himanshu Tamplate.All Right Reserved
+            </div>
+</footer>
+       </div>
+    </body>
+    
